@@ -1,3 +1,4 @@
+--Create "Departments" table
 CREATE TABLE "Departments" (
     "dept_no" VARCHAR   NOT NULL,
     "dept_name" VARCHAR   NOT NULL,
@@ -5,20 +6,26 @@ CREATE TABLE "Departments" (
         "dept_no"
      )
 );
+--Test table
 SELECT * FROM "Departments";
 
+--Create "dept_employees" table
 CREATE TABLE "dept_employees" (
     "emp_no" INT   NOT NULL,
     "dept_no" VARCHAR   NOT NULL
 );
+--Test table
 SELECT * FROM "dept_employees";
 
+--Create "Salaries" table
 CREATE TABLE "Salaries" (
     "emp_no" INT   NOT NULL,
     "salary" INT   NOT NULL
 );
+--Test table
 SELECT * FROM "Salaries";
 
+--Create "Titles" table
 CREATE TABLE "Titles" (
     "title_id" VARCHAR   NOT NULL,
     "title" VARCHAR   NOT NULL,
@@ -26,8 +33,10 @@ CREATE TABLE "Titles" (
         "title_id"
      )
 );
+--Test table
 SELECT * FROM "Titles";
 
+--Create "employees" table
 CREATE TABLE "employees" (
     "emp_no" INT   NOT NULL,
     "emp_title_id" VARCHAR   NOT NULL,
@@ -40,14 +49,18 @@ CREATE TABLE "employees" (
         "emp_no"
      )
 );
+--Test table
 SELECT * FROM "employees";
 
+--Create "dept_managers" table
 CREATE TABLE "dept_managers" (
     "dept_no" VARCHAR   NOT NULL,
     "emp_no" INT   NOT NULL
 );
+--Test table
 SELECT * FROM "dept_managers";
 
+--Add foreign keys
 ALTER TABLE "dept_employees" ADD CONSTRAINT "fk_dept_employees_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
@@ -66,7 +79,8 @@ REFERENCES "Departments" ("dept_no");
 ALTER TABLE "dept_managers" ADD CONSTRAINT "fk_dept_managers_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
-
+--QUESTION 1
+-- Select columns from "employees" and "Salaries" -- 
 SELECT 
 	"employees".emp_no,
 	last_name,
