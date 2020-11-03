@@ -66,23 +66,17 @@ REFERENCES "Departments" ("dept_no");
 ALTER TABLE "dept_managers" ADD CONSTRAINT "fk_dept_managers_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+SELECT 
+	"employees".emp_no,
+	last_name,
+	first_name,
+	hire_date,
+	sex,
+	salary
+FROM "employees", "Salaries"
+WHERE "employees".emp_no = "Salaries".emp_no;
+
 	
 	
 	
