@@ -171,7 +171,13 @@ JOIN "Departments"
 WHERE "Departments".dept_name = 'Sales'
 OR "Departments".dept_name = 'Development';
 
-
+--STEP 8
+-- list in descending order - frequency count of employee last names 
+SELECT last_name, COUNT(last_name) AS Frequency
+FROM "employees"
+GROUP BY last_name
+ORDER BY 
+COUNT(last_name) DESC;
 
 
 
