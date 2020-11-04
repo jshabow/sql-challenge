@@ -97,13 +97,29 @@ WHERE "employees".emp_no = "Salaries".emp_no;
 -- STEP 2
 -- List employees hired in 1986
 SELECT 
-first_name,
-last_name,
-hire_date
+	first_name,
+	last_name,
+	hire_date
 FROM "employees"
 WHERE hire_date >= '1/1/1986'
 AND hire_date < '1/1/1987';
 
+--STEP 3
+--
+
+SELECT
+	"dept_managers".dept_no,
+	"Departments".dept_name,
+	"dept_managers".emp_no,
+	"employees".last_name,
+	"employees".first_name
+FROM "dept_managers"
+JOIN "Departments"
+	ON "dept_managers".dept_no = "Departments".dept_no
+JOIN "employees"
+	ON "dept_managers".emp_no = "employees".emp_no;
+
+	
 
 
 
