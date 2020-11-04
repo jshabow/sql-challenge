@@ -105,8 +105,7 @@ WHERE hire_date >= '1/1/1986'
 AND hire_date < '1/1/1987';
 
 --STEP 3
---
-
+-- List managers from each department
 SELECT
 	"dept_managers".dept_no,
 	"Departments".dept_name,
