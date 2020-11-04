@@ -131,8 +131,15 @@ JOIN "Departments"
 JOIN "employees"
 	ON "dept_employees".emp_no = "employees".emp_no;
 	
-
-
+--STEP 5
+-- List all employees with first name "Hercules" and Last name starting with "B"
+SELECT 
+	first_name,
+	last_name,
+	sex
+FROM "employees"
+WHERE first_name = 'Hercules'
+AND last_name LIKE 'B%';
 
 
 
