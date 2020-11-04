@@ -141,7 +141,19 @@ FROM "employees"
 WHERE first_name = 'Hercules'
 AND last_name LIKE 'B%';
 
-
+--STEP 6 
+-- List employees from Sales department 
+SELECT 
+	"dept_employees".emp_no,
+	"employees".last_name,
+	"employees".first_name,
+	"Departments".dept_name
+FROM "dept_employees"
+JOIN "employees"
+	ON "dept_employees".emp_no = "employees".emp_no
+JOIN "Departments"
+	ON "dept_employees".dept_no = "Departments".dept_no
+WHERE "Departments".dept_name = 'Sales';
 
 
 
