@@ -156,6 +156,21 @@ JOIN "Departments"
 WHERE "Departments".dept_name = 'Sales';
 
 
+--STEP 7 
+--List employees in Sales and Development depts.
+SELECT
+	"dept_employees".emp_no,
+	"employees".last_name,
+	"employees".first_name,
+	"Departments".dept_name
+FROM "dept_employees"
+JOIN "employees"
+	ON "dept_employees".emp_no = "employees".emp_no
+JOIN "Departments"
+	ON "dept_employees".dept_no = "Departments".dept_no
+WHERE "Departments".dept_name = 'Sales'
+OR "Departments".dept_name = 'Development';
+
 
 
 
