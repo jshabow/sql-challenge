@@ -1,5 +1,5 @@
 # sql-challenge
-# Running data analysis on several CSVs regarding, departments, titles, employees, dept_employees, dept_managers, and Salaries.
+Running data analysis on several CSVs regarding a company's departments, titles, employees, dept_employees, dept_managers, and salaries. 
 
 # STEPS 1-8:
 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
