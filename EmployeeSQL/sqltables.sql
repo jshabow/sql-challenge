@@ -25,7 +25,7 @@ CREATE TABLE "Salaries" (
 --Test table
 SELECT * FROM "Salaries";
 
---Create "Titles" table
+--Create "Titles" table 
 CREATE TABLE "Titles" (
     "title_id" VARCHAR   NOT NULL,
     "title" VARCHAR   NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE "Titles" (
 --Test table
 SELECT * FROM "Titles";
 
---Create "employees" table
+--Create "employees" table 
 CREATE TABLE "employees" (
     "emp_no" INT   NOT NULL,
     "emp_title_id" VARCHAR   NOT NULL,
