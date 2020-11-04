@@ -96,6 +96,7 @@ WHERE "employees".emp_no = "Salaries".emp_no;
 
 -- STEP 2
 -- List employees hired in 1986
+--Cant figure out the WHERE command here - 
 SELECT 
 	first_name,
 	last_name,
