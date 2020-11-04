@@ -79,8 +79,8 @@ REFERENCES "Departments" ("dept_no");
 ALTER TABLE "dept_managers" ADD CONSTRAINT "fk_dept_managers_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
---QUESTION 1
--- Select columns from "employees" and "Salaries" -- 
+--STEP 1
+-- List employee info and salaries "employees" and "Salaries" -- 
 SELECT 
 	"employees".emp_no,
 	last_name,
@@ -90,6 +90,32 @@ SELECT
 	salary
 FROM "employees", "Salaries"
 WHERE "employees".emp_no = "Salaries".emp_no;
+
+
+
+
+-- STEP 2
+-- List employees hired in 1986
+SELECT 
+first_name,
+last_name,
+hire_date
+FROM "employees"
+WHERE hire_date >= '1/1/1986'
+AND hire_date < '1/1/1987';
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 	
